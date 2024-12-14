@@ -1,0 +1,123 @@
+/* Start Variables */
+:root {
+    --Dark-cyan: hsl(158, 36%, 37%);
+    --Cream: hsl(30, 38%, 92%);
+    --Very-dark-blue: hsl(212, 21%, 14%);
+    --Dark-grayish-blue: hsl(228, 12%, 48%)
+}
+/* End Variables */
+
+/* Start Rules */
+*{
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: "Montserrat", sans-serif;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--Cream);
+}
+/* End Rules */
+
+/* Start main */
+main {
+    border-radius: 18px;
+    width: 600px;
+    display: flex;
+    overflow: hidden;
+}
+main .image,
+main .content {
+    flex-basis: 50%;
+}
+main .image {
+    background-image: url(images/image-product-desktop.jpg);
+    background-size: cover;
+    height: 450px;
+}
+main .content {
+    padding: 30px;
+    background-color: white;
+}
+main .content h1 {
+    color: var(--Very-dark-blue);
+    font-weight: normal;
+    font-size: 1rem;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+}
+main .content h2 {
+    font-family: "Fraunces", serif;
+    margin-block: 20px 30px;
+    font-size: 2rem;
+    line-height: 1;
+}
+main .content p {
+    color: var(--Dark-grayish-blue);
+    margin-bottom: 30px;
+    font-size: .9rem;
+    line-height: 1.6;
+}
+main .content .price {
+    display: flex;
+    font-family: "Fraunces", serif;
+    align-items: center;
+}
+main .content .price span:first-of-type {
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--Dark-cyan);
+    margin-right: 30px;
+}
+main .content .price span:last-of-type {
+    color: var(--Dark-grayish-blue);
+    text-decoration:line-through
+}
+main .content button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    letter-spacing: 1px;
+    width: 100%;
+    padding-block: 15px;
+    border-radius: 10px;
+    background-color: var(--Dark-cyan);
+    color: white;
+    border: none;
+    margin-top: 20px;
+    cursor: pointer;
+}
+main .content button:hover {
+    opacity: .8;
+}
+main .content button:active {
+    background-color: var(--Very-dark-blue)
+}
+main .content button:focus {
+    background-color: var(--Very-dark-blue);
+    opacity: 1;
+}
+main .content button img {
+    margin-right: 10px;
+}
+@media (max-width: 767px) {
+    main {
+        flex-direction: column;
+        max-width: 400px;
+        margin: 15px;
+    }
+    main .image {
+        background-image: url(images/image-product-mobile.jpg);
+        background-size: cover;
+        min-height: 240px;
+        width: 100%;
+    }
+}    
+/* End main */
